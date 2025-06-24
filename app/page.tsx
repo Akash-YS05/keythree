@@ -1,8 +1,8 @@
 "use client"
 
 import Hyperspeed from "./components/hyperspeed"
-import { ArrowRight, Shield, Key, Zap, Lock, Users, Code } from "lucide-react"
-import { TextHoverEffect } from "./components/ui/text-hover-effect"
+import { ArrowRight, Shield, Key, Zap, Lock, Users, Code, Github, Twitter } from "lucide-react"
+import { WalletButton } from "./components/wallet-button"
 
 export default function Home() {
   return (
@@ -53,12 +53,19 @@ export default function Home() {
 
         {/* Content Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-6">
+          {/* Wallet Button - Top Right */}
+          <div className="absolute top-6 right-6">
+            <WalletButton />
+          </div>
+
           {/* Main Content */}
           <div className="max-w-4xl space-y-6">
             <div className="">
-              <h1 className="text-3xl font-light md:text-5xl font-noto-serif bg-gradient-to-tr from-cyan-600 to-indigo-400 bg-clip-text text-transparent p-2">Keychain</h1>
+              <h1 className="text-3xl font-bold md:text-5xl font-noto-serif bg-gradient-to-tr from-cyan-600 to-indigo-400 bg-clip-text text-transparent p-2">
+                Keychain
+              </h1>
             </div>
-            <h1 className="text-5xl md:text-7xl font-noto-serif">
+            <h1 className="text-5xl md:text-7xl font-light font-noto-serif">
               The Self-Custodial
               <br />
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -92,18 +99,22 @@ export default function Home() {
       <section className="min-h-screen bg-black text-white py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-noto-serif mb-12">
-            The Problem?
-          </h2>
+            The {""}
+            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Problem?
+              </span>
+            </h2>
           <div className="bg-zinc-900/50 border border-zinc-600 rounded-2xl p-12 max-w-4xl mx-auto backdrop-blur-sm">
             <p className="text-lg md:text-2xl text-gray-300 leading-relaxed">
-              Users struggle with secure, decentralized password storage. Existing Web2 managers are custodial, and current Web3 solutions are too technical.
+              Users struggle with secure, decentralized password storage. Existing Web2 managers are custodial, and
+              current Web3 solutions are too technical.
             </p>
           </div>
         </div>
       </section>
 
       {/* Solution Section */}
-      <section className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white py-10 px-6">
+      <section className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white p-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-noto-serif mb-8">
@@ -172,7 +183,9 @@ export default function Home() {
                   <Zap className="w-8 h-8" />
                 </div>
                 <h4 className="text-lg font-semibold mb-2">Speed & Cost</h4>
-                <p className="text-gray-400">Fast and cheap transactions make it practical for storing and updating secrets</p>
+                <p className="text-gray-400">
+                  Fast and cheap transactions make it practical for storing and updating secrets
+                </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -197,7 +210,9 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div>
                 <h4 className="text-xl font-semibold mb-3 text-green-400">Fully Open-Source</h4>
-                <p className="text-gray-400">Complete transparency with all code available for audit and contribution</p>
+                <p className="text-gray-400">
+                  Complete transparency with all code available for audit and contribution
+                </p>
               </div>
               <div>
                 <h4 className="text-xl font-semibold mb-3 text-blue-400">Developer-First</h4>
@@ -209,31 +224,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="max-w-6xl py-10 mx-auto text-center">
+          <Github className="w-6 h-6 inline-block mr-2" />
+          <Twitter className="w-6 h-6 inline-block ml-2" />
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-black py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            Ready to Take Control of Your{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Digital Security
-            </span>
-            ?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Join the future of password management with true self-custody and blockchain-powered security.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-cyan-600 px-12 py-4 rounded-lg text-xl font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-3">
-              Start Building
-              <ArrowRight className="w-6 h-6" />
-            </button>
-            <button className="border border-white/30 px-12 py-4 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">
-              View Documentation
-            </button>
-          </div>
         </div>
       </section>
     </div>
