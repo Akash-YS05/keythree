@@ -2,6 +2,7 @@
 
 import Hyperspeed from "./components/hyperspeed"
 import { ArrowRight, Shield, Key, Zap, Lock, Users, Code } from "lucide-react"
+import { TextHoverEffect } from "./components/ui/text-hover-effect"
 
 export default function Home() {
   return (
@@ -54,6 +55,9 @@ export default function Home() {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-6">
           {/* Main Content */}
           <div className="max-w-4xl space-y-6">
+            <div className="">
+              <h1 className="text-3xl font-light md:text-5xl font-noto-serif bg-gradient-to-tr from-cyan-600 to-indigo-400 bg-clip-text text-transparent p-2">Keychain</h1>
+            </div>
             <h1 className="text-5xl md:text-7xl font-noto-serif">
               The Self-Custodial
               <br />
@@ -99,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Solution Section */}
-      <section className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white py-20 px-6">
+      <section className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white py-10 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-noto-serif mb-8">
