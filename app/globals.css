@@ -11,6 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-noto-serif: var(--font-noto-serif-display);
+  --font-merriweather: var(--font-merriweather);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +25,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url('/gradii-1920x1080 (4).png');
+  }
 }
