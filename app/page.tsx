@@ -2,6 +2,7 @@
 import { Navbar } from "./components/navbar"
 import { Footer } from "./components/footer"
 import { SolutionSection } from "./components/solution-section"
+import { FAQSection } from "./components/faq-section"
 
 export default function Home() {
   return (
@@ -140,6 +141,20 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+       {/* FAQ Section */}
+       <section id="faq" className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-merriweather text-gray-200 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Everything you need to know about Keychain and blockchain-based password management
+            </p>
+          </div>
+
+          <FAQSection />
         </div>
       </section>
 

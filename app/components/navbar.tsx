@@ -13,7 +13,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold font-merriweather">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#7a40f8] via-teal-400 to-[#029f66] bg-clip-text text-transparent">
                 Keychain
               </span>
             </div>
@@ -45,6 +45,12 @@ export function Navbar() {
                 className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-300"
               >
                 Docs
+              </a>
+              <a
+                href="#faq"
+                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-300"
+              >
+                FAQ
               </a>
             </div>
           </div>
@@ -79,6 +85,9 @@ export function Navbar() {
               </a>
               <a href="#docs" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
                 Docs
+              </a>
+              <a href="#faq" className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">
+                FAQ
               </a>
               <div className="px-3 py-2">
                 <WalletButton />
