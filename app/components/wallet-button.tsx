@@ -10,6 +10,7 @@ export function WalletButton() {
   const { setVisible } = useWalletModal()
 
   const base58 = useMemo(() => publicKey?.toBase58(), [publicKey])
+
   const content = useMemo(() => {
     if (connecting) return "Connecting..."
     if (publicKey) return `${base58!.slice(0, 4)}...${base58!.slice(-4)}`
