@@ -13,7 +13,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#7a40f8] via-teal-400 to-[#029f66] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold font-merriweather">
                 Keychain
               </span>
             </div>
@@ -24,31 +24,19 @@ export function Navbar() {
             <div className="ml-10 flex items-baseline space-x-8">
               <a
                 href="#problem"
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-300"
+                className="text-gray-300 hover:text-white px-3 py-2 text-md font-medium transition duration-300"
               >
                 Problem
               </a>
               <a
                 href="#solution"
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-300"
+                className="text-gray-300 hover:text-white px-3 py-2 text-md font-medium transition duration-300"
               >
                 Solution
               </a>
               <a
-                href="#why-solana"
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-300"
-              >
-                Why Solana
-              </a>
-              <a
-                href="#docs"
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-300"
-              >
-                Docs
-              </a>
-              <a
                 href="#faq"
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-300"
+                className="text-gray-300 hover:text-white px-3 py-2 text-md font-medium transition duration-300"
               >
                 FAQ
               </a>

@@ -3,6 +3,8 @@ import { Navbar } from "./components/navbar"
 import { Footer } from "./components/footer"
 import { SolutionSection } from "./components/solution-section"
 import { FAQSection } from "./components/faq-section"
+import { WaitlistStats } from "./components/waitlist-stats"
+import { WaitlistForm } from "./components/waitlist-form"
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
           Keychain: The self-custodial password manager
         </div>
       </div>
+      <WaitlistStats />
 
       <p className="text-4xl md:text-6xl tracking-wide leading-tight font-merriweather text-gray-300 text-center max-w-5xl mx-auto px-4">
         Hyperspeed security for your digital life.
@@ -32,9 +35,7 @@ export default function Home() {
       </p>
 
       <div className="flex justify-center items-center mt-10 mb-20">
-        <button className="px-6 py-3 bg-gradient-to-r from-[#7a40f8] via-teal-400 to-[#029f66] text-white rounded-md text-xl font-bold tracking-wide flex justify-center items-center shadow-lg hover:from-[#b473f5] hover:to-[#00FFA3] transition duration-300">
-          JOIN WAITLIST
-        </button>
+        <WaitlistForm />
       </div>
 
       {/* The Solution Section */}
