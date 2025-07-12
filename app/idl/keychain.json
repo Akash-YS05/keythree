@@ -1,0 +1,232 @@
+{
+    "address": "TXHddDGCYaoQqPmQatT7xYAWPfrSaVo5FosrxaTcncF",
+    "metadata": {
+      "name": "keychain",
+      "version": "0.1.0",
+      "spec": "0.1.0",
+      "description": "Created with Anchor"
+    },
+    "instructions": [
+      {
+        "name": "add_entry",
+        "discriminator": [
+          170,
+          45,
+          66,
+          212,
+          251,
+          230,
+          45,
+          38
+        ],
+        "accounts": [
+          {
+            "name": "user",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "entry",
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    101,
+                    110,
+                    116,
+                    114,
+                    121
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "user"
+                },
+                {
+                  "kind": "arg",
+                  "path": "label"
+                }
+              ]
+            }
+          },
+          {
+            "name": "system_program",
+            "address": "11111111111111111111111111111111"
+          }
+        ],
+        "args": [
+          {
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "name": "encrypted_data",
+            "type": "bytes"
+          }
+        ]
+      },
+      {
+        "name": "delete_entry",
+        "discriminator": [
+          227,
+          198,
+          83,
+          191,
+          70,
+          23,
+          194,
+          58
+        ],
+        "accounts": [
+          {
+            "name": "user",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "entry",
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    101,
+                    110,
+                    116,
+                    114,
+                    121
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "user"
+                },
+                {
+                  "kind": "arg",
+                  "path": "label"
+                }
+              ]
+            }
+          }
+        ],
+        "args": []
+      },
+      {
+        "name": "update_entry",
+        "discriminator": [
+          70,
+          47,
+          181,
+          2,
+          1,
+          40,
+          2,
+          92
+        ],
+        "accounts": [
+          {
+            "name": "user",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "entry",
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    101,
+                    110,
+                    116,
+                    114,
+                    121
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "user"
+                },
+                {
+                  "kind": "arg",
+                  "path": "label"
+                }
+              ]
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "new_encrypted_data",
+            "type": "bytes"
+          }
+        ]
+      }
+    ],
+    "accounts": [
+      {
+        "name": "PasswordEntry",
+        "discriminator": [
+          229,
+          44,
+          79,
+          97,
+          207,
+          100,
+          153,
+          40
+        ]
+      }
+    ],
+    "errors": [
+      {
+        "code": 6000,
+        "name": "Unauthorized",
+        "msg": "You are not authorized to perform this action."
+      },
+      {
+        "code": 6001,
+        "name": "MissingBump",
+        "msg": "Missing bump seed."
+      }
+    ],
+    "types": [
+      {
+        "name": "PasswordEntry",
+        "type": {
+          "kind": "struct",
+          "fields": [
+            {
+              "name": "owner",
+              "type": "pubkey"
+            },
+            {
+              "name": "label",
+              "docs": [
+                "Label to identify the password entry (e.g., \"twitter\")."
+              ],
+              "type": "string"
+            },
+            {
+              "name": "encrypted_data",
+              "docs": [
+                "Client-side encrypted data stored as bytes."
+              ],
+              "type": "bytes"
+            },
+            {
+              "name": "bump",
+              "docs": [
+                "PDA bump seed for this entry account."
+              ],
+              "type": "u8"
+            }
+          ]
+        }
+      }
+    ]
+  }
