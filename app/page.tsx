@@ -54,110 +54,106 @@ export default function Home() {
     </div>
 
       
-      <section id="solution" className="py-20 px-6">
+      <section id="solution" className="py-24 px-6">
         
           <SolutionSection />
       </section>
 
       {/* Why Solana Section */}
-      <section id="why-solana" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-merriweather text-gray-200 mb-6">
-              Why{" "}
-              <span className="bg-gradient-to-r from-[#7a40f8] via-teal-400 to-[#029f66] bg-clip-text text-transparent">
-                Solana
-              </span>
-              ?
-            </h2>
-            <hr className="h-[2px] w-full bg-gradient-to-r from-transparent via-gray-500 to-transparent border-0"/>
+      <section id="why-solana" className="relative w-full py-20">
+  {/* Soft background */}
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50 to-gray-100 opacity-90 pointer-events-none" />
 
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto my-4">
-              We chose Solana for its unmatched speed, low costs, and robust security infrastructure
-            </p>
-          </div>
+  <div className="max-w-6xl mx-auto px-6 relative z-10">
+    {/* Header */}
+    <div className="text-center space-y-6">
+      <h2 className="text-4xl md:text-6xl font-outfit text-gray-800 tracking-tight">
+        Why <span className="font-instrument italic">Solana ?</span>
+      </h2>
+      <hr className="h-[2px] w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent border-0" />
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        We chose Solana for its unmatched speed, minimal costs, and proven
+        security — the ideal foundation for a password manager that must scale
+        globally while remaining accessible.
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-[#7a40f8] to-[#029f66] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-200 mb-2">Lightning Fast</h3>
-              <p className="text-gray-400">
-                Sub-second transaction times mean instant password syncing across all your devices.
-              </p>
-            </div>
+    <div className="relative max-w-4xl mx-auto">
+    <div className="grid md:grid-cols-3 gap-6 text-left mt-10">
+  <div className="relative px-6">
+    <h3 className="text-lg text-gray-800 mb-3 font-outfit">
+      ⚡ Lightning Fast
+    </h3>
+    <p className="text-sm text-gray-600 leading-relaxed">
+      Sub-second transaction times ensure instant password syncing across all your devices without delays.
+    </p>
+    <div className="absolute top-0 right-0 h-full w-px bg-gray-200 hidden md:block"></div>
+  </div>
+  
+  <div className="relative px-6">
+    <h3 className="text-lg text-gray-800 mb-3 font-outfit">
+      💰 Ultra Low Fees
+    </h3>
+    <p className="text-sm text-gray-600 leading-relaxed">
+      With fees at fractions of a cent, frequent updates stay affordable and accessible to everyone worldwide.
+    </p>
+    <div className="absolute top-0 right-0 h-full w-px bg-gray-200 hidden md:block"></div>
+  </div>
+  
+  <div className="px-6">
+    <h3 className="text-lg text-gray-800 mb-3 font-outfit">
+      🛡️ Battle-Tested Security
+    </h3>
+    <p className="text-sm text-gray-600 leading-relaxed">
+      Solana has secured billions in assets, offering a hardened infrastructure that gives confidence your data is safe.
+    </p>
+  </div>
+</div>
+    </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-[#7a40f8] to-[#029f66] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">💰</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-200 mb-2">Ultra Low Fees</h3>
-              <p className="text-gray-400">
-                Transactions cost fractions of a penny, making frequent updates affordable for everyone.
-              </p>
-            </div>
+    {/* Built for Scale Block */}
+    <div className="max-w-3xl mx-auto text-center mt-14">
+      <h3 className="text-2xl font-outfit text-gray-800">
+        Built for Scale
+      </h3>
+      <p className="text-base text-gray-600 leading-relaxed">
+        Solana can handle over <span className="font-medium">65,000+</span>{" "}
+        transactions per second, ensuring Keychain remains fast and responsive
+        as we grow to millions of users.
+      </p>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-[#7a40f8] to-[#029f66] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">🛡️</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-200 mb-2">Battle-Tested Security</h3>
-              <p className="text-gray-400">
-                Solana's proven track record securing billions in value gives you confidence in your data's safety.
-              </p>
-            </div>
-          </div>
-
-          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-8 shadow-lg">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-200 mb-4">Built for Scale</h3>
-                <p className="text-gray-400 mb-4">
-                  Solana can handle 65,000+ transactions per second, ensuring Keychain remains fast and responsive as we
-                  grow to millions of users.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Transaction Speed</span>
-                    <span className="text-green-400">{"<"} 1 second</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Average Fee</span>
-                    <span className="text-green-400">$0.00025</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Network Uptime</span>
-                    <span className="text-green-400">99.9%+</span>
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-r from-[#7a40f8]/20 to-[#029f66]/20 rounded-full mb-4">
-                  <span className="text-4xl">🚀</span>
-                </div>
-                <p className="text-gray-300 font-semibold">Ready for Web3's Future</p>
-              </div>
-            </div>
-          </div>
+      <div className="space-y-4 max-w-sm mx-auto mt-10">
+        <div className="flex justify-between text-sm">
+          <span className="text-gray-500">Transaction Speed</span>
+          <span className="text-gray-700">{"<"} 1 second</span>
         </div>
-      </section>
+        <div className="flex justify-between text-sm">
+          <span className="text-gray-500">Average Fee</span>
+          <span className="text-gray-700">$0.00025</span>
+        </div>
+        <div className="flex justify-between text-sm">
+          <span className="text-gray-500">Network Uptime</span>
+          <span className="text-gray-700">99.9%+</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
        {/* FAQ Section */}
-       <section id="faq" className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-merriweather text-gray-200 mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to know about Keychain and blockchain-based password management
-            </p>
-          </div>
-
+       <section id="faq" className="py-14 px-6">
+        <div className="mx-auto">
           <FAQSection />
         </div>
       </section>
 
-      <Footer />
+      <section id="faq" className="px-6">
+        <div className="mx-auto">
+          <Footer />
+        </div>
+      </section>
     </div>
   )
 }
