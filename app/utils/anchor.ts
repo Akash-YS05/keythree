@@ -7,7 +7,7 @@ import {
 } from "@coral-xyz/anchor";
 import idl from "../idl/keychain.json";
 
-const programId = new PublicKey("TXHddDGCYaoQqPmQatT7xYAWPfrSaVo5FosrxaTcncF"); // replace if needed
+const programId = new PublicKey("TXHddDGCYaoQqPmQatT7xYAWPfrSaVo5FosrxaTcncF"); 
 const network = "https://api.devnet.solana.com"
 
 const connection = new Connection(network, "confirmed");

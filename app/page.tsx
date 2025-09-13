@@ -8,57 +8,55 @@ import { WaitlistForm } from "./components/waitlist-form"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage:  `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-image)` }}>
+    <div className="min-h-screen bg-cover bg-center bg-fixed bg-[#fafafa]" >
       <Navbar />
 
       {/* Hero Section */}
-      <div className="flex justify-center items-center w-full pt-20">
-        <div className="inline-flex justify-center items-center m-auto px-3 py-1 rounded-full text-gray-200 text-sm font-light mb-6 backdrop-blur-md bg-white/10 border border-white/10 shadow-md">
+      <div className="flex justify-center items-center w-full pt-30">
+
+
+        <div className="inline-flex justify-center items-center m-auto px-3 py-1 rounded-full text-gray-700 text-sm font-light mb-6 backdrop-blur-md bg-white/10 border border-white/5 shadow-md">
           <span className="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
           Keychain: The self-custodial password manager
         </div>
       </div>
-      <WaitlistStats />
 
-      <p className="text-4xl md:text-6xl tracking-wide leading-tight font-merriweather text-gray-300 text-center max-w-5xl mx-auto px-4">
-        Hyperspeed security for your digital life.
-        <br />
-        <span className="text-gray-400 text-lg md:text-lg leading-none tracking-none">
-        An on-chain password manager, where only you can access your secrets - no one else
-        </span>
-        <span className="font-bold text-2xl md:text-3xl py-5 block">
-          Powered by the{" "}
-          <span className="bg-gradient-to-r from-[#7a40f8] via-teal-400 to-[#029f66] bg-clip-text text-transparent">
-            Solana Blockchain
-          </span>
-        </span>
+    <div className="max-w-5xl mx-auto px-4">
+      <p className="text-4xl md:text-7xl tracking-tight leading-tight font-outfit text-gray-700 text-center ">
+        Hyperspeed security for your <span className="font-instrument italic tracking-wide">digital life.</span>
+        
       </p>
+      <p className="text-gray-700 text-lg md:text-lg text-center m-3">
+        An on-chain password manager, where only you can access your secrets - no one else
+      </p>
+      <p className="font-light tracking-tight text-gray-700 text-2xl md:text-3xl py-5 block text-center">
+          Powered by the <span className="font-instrument"> Solana Blockchain</span>
+      </p>
+      <div className="flex justify-center gap-4 mt-6">
+  <a
+    href="/get-started"
+    className="px-6 py-3 bg-gray-900 text-white rounded-sm font-medium shadow-lg hover:opacity-90 transition"
+  >
+    Get Started
+  </a>
+  <a
+    href="/learn-more"
+    className="px-6 py-3 border border-gray-500 text-gray-800 rounded-sm font-medium hover:bg-gray-200 transition"
+  >
+    Learn More
+  </a>
+</div>
 
-      <div className="flex justify-center items-center mt-10 mb-20">
-        <WaitlistForm />
-      </div>
+      <p className="text-sm text-gray-500 text-center mt-2">
+  Backed by next-gen blockchain technology • 100% self-custodial
+</p>
 
-      {/* The Solution Section */}
+    </div>
+
+      
       <section id="solution" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h3 className="text-xl md:text-xl font-light text-gray-400">Traditional password managers are centralized, vulnerable, and put your most sensitive data at risk</h3>
-            <h2 className="text-4xl md:text-6xl font-merriweather text-gray-200 m-8">
-              The{" "}
-              <span className="bg-gradient-to-r from-[#7a40f8] via-teal-400 to-[#029f66] bg-clip-text text-transparent">
-                Solution
-              </span>
-            </h2>
-            <hr className="h-[2px] w-full bg-gradient-to-r from-transparent via-gray-500 to-transparent border-0"/>
-
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto m-4">
-              Keychain leverages blockchain technology to create a truly decentralized, secure, and private password
-              management experience
-            </p>
-          </div>
-
+        
           <SolutionSection />
-        </div>
       </section>
 
       {/* Why Solana Section */}
