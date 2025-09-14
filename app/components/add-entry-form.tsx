@@ -54,10 +54,28 @@ export default function AddEntryForm() {
   };
 
   return (
-    <div>
-      <input placeholder="Label" value={label} onChange={e => setLabel(e.target.value)} />
-      <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleSubmit}>Add Entry</button>
-    </div>
+    <div className="max-w-md mx-auto space-y-4 p-6 bg-gray-50 border border-gray-200 rounded-xl shadow-sm">
+  <h3 className="text-lg font-outfit text-gray-800">Add New Entry</h3>
+  <input
+    placeholder="Label"
+    value={label}
+    onChange={(e) => setLabel(e.target.value)}
+    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7a40f8]/40 text-gray-700"
+  />
+  <input
+    placeholder="Password"
+    type="password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7a40f8]/40 text-gray-700"
+  />
+  <button
+    onClick={handleSubmit}
+    className="w-full px-4 py-2 rounded-lg bg-gray-900 text-white font-medium hover:opacity-90 transition"
+  >
+    Add Entry
+  </button>
+</div>
+
   );
 }
