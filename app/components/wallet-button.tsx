@@ -6,7 +6,7 @@ import { Wallet, LogOut } from "lucide-react"
 import { useMemo } from "react"
 
 export function WalletButton() {
-  const { wallet, publicKey, disconnect, connecting } = useWallet()
+  const { publicKey, disconnect, connecting } = useWallet()
   const { setVisible } = useWalletModal()
 
   const base58 = useMemo(() => publicKey?.toBase58(), [publicKey])

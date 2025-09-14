@@ -19,6 +19,7 @@ export default function FetchEntry() {
     const program = getProgram(provider);
 
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const entries = await (program.account as any).passwordEntry.all([
         {
           memcmp: {
@@ -27,7 +28,7 @@ export default function FetchEntry() {
           },
         },
       ]);
-
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const userLabels = entries.map((e: any) => e.account.label);
       setLabels(userLabels);
       if (userLabels.length > 0) setSelectedLabel(userLabels[0]);
@@ -51,6 +52,7 @@ export default function FetchEntry() {
     );
 
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const entryAccount = await (program.account as any).passwordEntry.fetch(entryPda);
 
       if (!wallet.signMessage) return alert("Wallet does not support signing");

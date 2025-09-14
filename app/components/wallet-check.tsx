@@ -1,10 +1,10 @@
-import { useWallet } from "@solana/wallet-adapter-react"
+// import { useWallet } from "@solana/wallet-adapter-react"
 import { useWalletModal } from "@solana/wallet-adapter-react-ui"
 import { Wallet } from "lucide-react"
 
 // Wallet Connection Check Component
 export default function WalletConnectionCheck() {
-    const { publicKey } = useWallet()
+    // const { publicKey } = useWallet()
     const { setVisible } = useWalletModal()
     
     return (
