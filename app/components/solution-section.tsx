@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 const solutions = [
   {
@@ -63,10 +63,10 @@ const solutions = [
       ],
     },
   },
-]
+];
 
 export function SolutionSection() {
-  const [selectedSolution, setSelectedSolution] = useState(solutions[0])
+  const [selectedSolution, setSelectedSolution] = useState(solutions[0]);
 
   return (
     <section className="relative w-full">
@@ -76,38 +76,50 @@ export function SolutionSection() {
       <div className="max-w-6xl mx-auto px-6 relative z-10 space-y-20">
         {/* Problem Block */}
         <div className="text-center space-y-8">
-  <h2 className="text-4xl md:text-6xl font-outfit text-gray-800 tracking-tight">
-    The <span className="font-instrument italic">Problem</span>
-  </h2>
-  <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-    Passwords remain the most widely used method of authentication, yet the tools we rely on to manage them are deeply flawed.
-  </p>
+          <h2 className="text-4xl md:text-6xl font-outfit text-gray-800 tracking-tight">
+            The <span className="font-instrument italic">Problem</span>
+          </h2>
+          <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+            Passwords remain the most widely used method of authentication, yet
+            the tools we rely on to manage them are deeply flawed.
+          </p>
 
-  <div className="grid md:grid-cols-3 gap-6 text-left mt-10">
-    <div className="relative px-6">
-      <h3 className="text-lg text-gray-800 mb-3 font-outfit ">Centralized Control</h3>
-      <p className="text-sm text-gray-600 leading-relaxed">
-        Traditional password managers store your most sensitive data on centralized servers. A single breach can expose millions of user vaults at once.
-      </p>
-      <hr className="absolute top-0 right-0 h-full w-px bg-gray-200 hidden md:block" />
-    </div>
+          <div className="grid md:grid-cols-3 gap-6 text-left mt-10">
+            <div className="relative px-6">
+              <h3 className="text-lg text-gray-800 mb-3 font-outfit ">
+                Centralized Control
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Traditional password managers store your most sensitive data on
+                centralized servers. A single breach can expose millions of user
+                vaults at once.
+              </p>
+              <hr className="absolute top-0 right-0 h-full w-px bg-gray-200 hidden md:block" />
+            </div>
 
-    <div className="relative px-6">
-      <h3 className="text-lg text-gray-800 mb-3 font-outfit">Single Points of Failure</h3>
-      <p className="text-sm text-gray-600 leading-relaxed">
-        If their servers go offline, are censored, or compromised, you lose access to your entire digital identity instantly.
-      </p>
-      <hr className="absolute top-0 right-0 h-full w-px bg-gray-200 hidden md:block" />
-    </div>
+            <div className="relative px-6">
+              <h3 className="text-lg text-gray-800 mb-3 font-outfit">
+                Single Points of Failure
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                If their servers go offline, are censored, or compromised, you
+                lose access to your entire digital identity instantly.
+              </p>
+              <hr className="absolute top-0 right-0 h-full w-px bg-gray-200 hidden md:block" />
+            </div>
 
-    <div className="px-6">
-      <h3 className="text-lg text-gray-800 mb-3 font-outfit">Trust Assumptions</h3>
-      <p className="text-sm text-gray-600 leading-relaxed">
-        You are forced to trust that companies will not peek into, mishandle, or share your secrets — even though history shows repeated security failures.
-      </p>
-    </div>
-  </div>
-</div>
+            <div className="px-6">
+              <h3 className="text-lg text-gray-800 mb-3 font-outfit">
+                Trust Assumptions
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                You are forced to trust that companies will not peek into,
+                mishandle, or share your secrets — even though history shows
+                repeated security failures.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Solution Block */}
         <div className="space-y-12">
@@ -126,7 +138,7 @@ export function SolutionSection() {
             {/* Left Side - Solution List */}
             <div className="space-y-4">
               {solutions.map((solution) => {
-                const isSelected = selectedSolution.id === solution.id
+                const isSelected = selectedSolution.id === solution.id;
 
                 return (
                   <button
@@ -151,11 +163,10 @@ export function SolutionSection() {
                       </p>
                     </div>
                   </button>
-                )
+                );
               })}
             </div>
 
-            {/* Right Side - Solution Details */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="space-y-6">
                 <div className="flex items-center space-x-3">
@@ -211,5 +222,5 @@ export function SolutionSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
