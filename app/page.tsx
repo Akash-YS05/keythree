@@ -3,8 +3,6 @@ import { Navbar } from "./components/navbar"
 import { Footer } from "./components/footer"
 import { SolutionSection } from "./components/solution-section"
 import { FAQSection } from "./components/faq-section"
-import { WaitlistStats } from "./components/waitlist-stats"
-import { WaitlistForm } from "./components/waitlist-form"
 
 export default function Home() {
   return (
@@ -29,8 +27,8 @@ export default function Home() {
       <p className="text-gray-700 text-lg md:text-lg text-center m-3">
         An on-chain password manager, where only you can access your secrets - no one else
       </p>
-      <p className="font-light tracking-tight text-gray-700 text-2xl md:text-3xl py-5 block text-center">
-          Powered by the <span className="font-instrument"> Solana Blockchain</span>
+      <p className="text-gray-700 text-2xl md:text-3xl py-5 block text-center">
+          Powered by the <span className="font-instrument font-bold"> Solana Blockchain</span>
       </p>
       <div className="flex justify-center gap-4 mt-6">
   <a

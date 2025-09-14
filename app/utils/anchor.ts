@@ -1,21 +1,28 @@
-import { Connection, clusterApiUrl, PublicKey } from "@solana/web3.js";
-import {
-  AnchorProvider,
-  Program,
-  Idl,
-  Wallet,
-} from "@coral-xyz/anchor";
+import { AnchorProvider, Program, Idl } from "@coral-xyz/anchor";
+import type { Wallet } from "@coral-xyz/anchor/dist/cjs/provider"; // ✅ browser Wallet type
+import { Connection, PublicKey } from "@solana/web3.js";
 import idl from "../idl/keychain.json";
 
-const programId = new PublicKey("TXHddDGCYaoQqPmQatT7xYAWPfrSaVo5FosrxaTcncF"); 
-const network = "https://api.devnet.solana.com"
+const programID = new PublicKey("TXHddDGCYaoQqPmQatT7xYAWPfrSaVo5FosrxaTcncF");
 
-const connection = new Connection(network, "confirmed");
+export function getProvider(walletAdapter: any): AnchorProvider {
+  if (!walletAdapter?.publicKey) throw new Error("Wallet not connected");
 
-export const getProvider = (wallet: Wallet): AnchorProvider =>
-  new AnchorProvider(connection, wallet, {
+  const connection = new Connection("http://127.0.0.1:8899", "confirmed");
+
+  // Cast the adapter into the Wallet interface
+  const wallet: Wallet = {
+    publicKey: walletAdapter.publicKey,
+    signTransaction: walletAdapter.signTransaction,
+    signAllTransactions: walletAdapter.signAllTransactions,
+  };
+
+  return new AnchorProvider(connection, wallet, {
     preflightCommitment: "confirmed",
   });
+}
 
-export const getProgram = (wallet: Wallet): Program =>
-  new Program(idl as Idl, getProvider(wallet));
+export function getProgram(provider: AnchorProvider) {
+  return new Program(idl as Idl, provider);
+}
+
