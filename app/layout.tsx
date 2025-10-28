@@ -38,7 +38,7 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "Keychain - Self-Custodial Password Manager",
+  title: "KeyThree - Self-Custodial Password Manager",
   description: "Hyperspeed security for your digital life. Powered by the Solana Blockchain",
 };
 
