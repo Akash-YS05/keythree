@@ -6,7 +6,7 @@ export function Footer() {
         {/* Brand */}
         <div className="text-center md:text-left space-y-3">
           <span className="text-2xl font-outfit bg-gradient-to-r from-[#7a40f8] via-teal-400 to-[#029f66] bg-clip-text text-transparent">
-            Keychain
+            KeyThree
           </span>
           <p className="text-gray-600 text-sm leading-relaxed max-w-md">
             The future of password management, powered by Solana blockchain technology.
